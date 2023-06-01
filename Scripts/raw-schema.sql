@@ -214,25 +214,6 @@ copy into northwind.raw.suppliers from
     $12 as home_page
 from @northwind_dataset_stage/northwind-suppliers);
 
-select 
-    $1 as employee_id, 
-    $2 as last_name, 
-    $3 as first_name, 
-    $4 as title, 
-    $5 as title_of_courtesy, 
-    $6 as birth_date, 
-    $7 as hire_date, 
-    $8 as address, 
-    $9 as city, 
-    $10 as region, 
-    $11 as postal_code, 
-    $12 as country,
-    $13 as home_phone,
-    $14 as extension,
-    $15 as notes,
-    $16 as reports_to,
-    $17 as photo_path
-from @northwind_dataset_stage/northwind-employees-02;
 
 grant usage on database northwind to role pc_dbt_db_picker_role;
 grant usage on schema northwind.raw to role pc_dbt_db_picker_role; 
