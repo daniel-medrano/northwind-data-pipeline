@@ -1,0 +1,74 @@
+version: 2
+
+models:
+  - name: stg_categories
+    description: the stage for product categories
+    columns:
+      - name: category_id
+        description: the primary key of stg_categories
+        tests:
+          - unique
+          - not_null
+  - name: stg_customers
+    description: the stage for customers
+    columns:
+      - name: customer_id
+        description: the primary key of stg_customers
+        tests:
+          - unique
+          - not_null
+  - name: stg_employees
+    description: the stage for employees
+    columns:
+      - name: employee_id
+        description: the primary key of stg_employees
+        tests:
+          - unique
+          - not_null
+  - name: stg_order_details
+    description: the stage for the details of orders, which product was bought, how many, and for how much
+    columns:
+      - name: order_id
+        description: the foreign key that relates stg_order_details with stg_orders
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_orders')
+              field: order_id
+      - name: product_id
+        description: the foreign that relates stg_order_details with stg_products
+        tests:
+          - not_null
+  - name: stg_orders
+    description: the stage for orders
+    columns:
+      - name: order_id
+        description: the primary key of stg_orders
+        tests:
+          - unique
+          - not_null
+  - name: stg_products
+    description: the stage for products
+    columns:
+      - name: product_id
+        description: the primary key of stg_products
+        tests:
+          - unique
+          - not_null
+  - name: stg_shippers
+    description: the stage for shippers
+    columns:
+      - name: shipper_id
+        description: the primary key of stg_shippers
+        tests:
+          - unique
+          - not_null
+  - name: stg_suppliers
+    description: the stage for suppliers
+    columns:
+      - name: supplier_id
+        description: the primary key of stg_suppliers
+        tests:
+          - unique
+          - not_null
+    
