@@ -2,8 +2,8 @@ with source as (
     select * from {{ source('northwind.raw', 'products') }}
 )
 select
-    product_id,
+    cast(product_id as integer) as product_id,
     product_name,
-    category_id,
-    supplier_id
+    cast(category_id as integer) as category_id,
+    cast(supplier_id as integer) as supplier_id
 from source
