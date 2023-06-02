@@ -1,7 +1,7 @@
 with source as (
-    select * from {{ source('northwind.raw', 'categories') }}
+    select * from {{ source('northwind', 'categories') }}
 )
 select
-    cast(category_id as integer) as category_id,
-    category_name
+    cast(categoryid as integer) as category_id,
+    categoryname as category_name
 from source

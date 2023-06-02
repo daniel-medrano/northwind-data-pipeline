@@ -1,7 +1,7 @@
 with source as (
-    select * from {{ source('northwind.raw', 'employees') }}
+    select * from {{ source('northwind', 'employees') }}
 )
 select
-    cast(employee_id as integer) as employee_id,
-    first_name || ' ' || last_name as full_name
+    cast(employeeid as integer) as employee_id,
+    firstname || ' ' || lastname as full_name
 from source

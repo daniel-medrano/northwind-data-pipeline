@@ -219,3 +219,7 @@ from @northwind_dataset_stage/northwind-suppliers);
 grant usage on database northwind to role pc_dbt_db_picker_role;
 grant usage on schema northwind.raw to role pc_dbt_db_picker_role; 
 grant select on all tables in schema northwind.raw to role pc_dbt_db_picker_role;
+
+grant usage on database fivetran_database to role pc_dbt_db_picker_role;
+grant usage on schema fivetran_database.northwind_dbo to role pc_dbt_db_picker_role; 
+grant select on all tables in schema fivetran_database.northwind_dbo to role pc_dbt_db_picker_role;

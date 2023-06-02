@@ -1,9 +1,9 @@
 with source as (
-    select * from {{ source('northwind.raw', 'customers') }}
+    select * from {{ source('northwind', 'customers') }}
 )
 select
-    customer_id,
-    company_name,
+    customerid as customer_id,
+    companyname as company_name,
     city,
     country
 from source

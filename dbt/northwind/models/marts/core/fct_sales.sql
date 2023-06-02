@@ -22,6 +22,8 @@ fct_sales as (
         unit_price,
         quantity,
         discount
+        -- TODO: gross_sales
+        -- TODO: net_sales
     from stg_orders o
     inner join stg_order_details od
         on o.order_id = od.order_id
