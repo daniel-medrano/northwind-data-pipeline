@@ -1,7 +1,7 @@
 with source as (
     select * from {{ source('northwind', 'categories') }}
 ),
-stg_categories (
+stg_categories as (
     select
         cast(categoryid as integer) as category_id,
         categoryname as category_name

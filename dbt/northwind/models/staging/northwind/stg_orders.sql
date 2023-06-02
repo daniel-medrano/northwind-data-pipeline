@@ -1,6 +1,6 @@
 with source as (
     select * from {{ source('northwind', 'orders') }}
-)
+),
 stg_orders as (
     select
         cast(orderid as integer) as order_id,
