@@ -9,5 +9,4 @@ dim_customers as (
         country
     from stg_customers
 )
-select * 
-from dim_customers
+select * from dim_customers

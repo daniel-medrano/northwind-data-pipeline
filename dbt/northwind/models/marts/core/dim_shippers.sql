@@ -7,5 +7,4 @@ dim_shippers as (
         company_name
     from stg_shippers
 )
-select *
-from dim_shippers
+select * from dim_shippers

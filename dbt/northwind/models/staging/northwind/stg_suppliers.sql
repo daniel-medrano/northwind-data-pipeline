@@ -1,7 +1,10 @@
 with source as (
-    select * from {{ source('northwind.raw', 'suppliers') }}
+    select * from {{ source('northwind', 'suppliers') }}
+),
+stg_suppliers as (
+    select
+        cast(supplierid as integer) as supplier_id,
+        companyname as company_name
+    from source
 )
-select
-    cast(supplier_id as integer) as supplier_id,
-    company_name
-from source
+select * from stg_suppliers

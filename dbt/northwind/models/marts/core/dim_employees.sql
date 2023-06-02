@@ -7,5 +7,4 @@ dim_employees as (
         full_name
     from stg_employees
 )
-select *
-from dim_employees
+select * from dim_employees

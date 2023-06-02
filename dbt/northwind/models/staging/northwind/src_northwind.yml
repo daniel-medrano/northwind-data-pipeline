@@ -1,9 +1,9 @@
 version: 2
 
 sources:
-  - name: northwind.raw
-    database: northwind
-    schema: raw
+  - name: northwind
+    database: fivetran_database
+    schema: northwind_dbo
     tables:
       - name: categories
       - name: customers
