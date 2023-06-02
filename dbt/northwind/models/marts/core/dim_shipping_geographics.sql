@@ -10,5 +10,4 @@ dim_shipping_geographics as (
         ship_country as country
     from stg_orders
 )
-select *
-from dim_shipping_geographics
+select * from dim_shipping_geographics

@@ -35,5 +35,4 @@ fct_sales as (
         and coalesce(o.ship_city, 'NULL') = coalesce(sg.city, 'NULL')
         and coalesce(o.ship_country, 'NULL') = coalesce(sg.country, 'NULL')
 )
-select *
-from fct_sales
+select * from fct_sales

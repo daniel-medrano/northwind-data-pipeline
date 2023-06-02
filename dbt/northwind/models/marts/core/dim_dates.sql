@@ -31,5 +31,4 @@ dim_dates as (
         year(date) as year
     from stg_orders
 )
-select *
-from dim_dates
+select * from dim_dates

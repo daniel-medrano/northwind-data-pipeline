@@ -19,5 +19,4 @@ dim_products as (
     inner join stg_suppliers s
         on p.supplier_id = s.supplier_id
 )
-select *
-from dim_products
+select * from dim_products
