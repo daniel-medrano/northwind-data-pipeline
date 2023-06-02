@@ -165,10 +165,11 @@ copy into northwind.raw.products from
     $3 as supplier_id,
     $4 as category_id,
     $5 as quantity_per_unit,
-    $6 as units_in_stock,
-    $7 as units_on_order,
-    $8 as reorder_level,
-    $9 as discontinued
+    $6 as unit_price,
+    $7 as units_in_stock,
+    $8 as units_on_order,
+    $9 as reorder_level,
+    $10 as discontinued
 from @northwind_dataset_stage/northwind-products);
 
 create table northwind.raw.shippers (
