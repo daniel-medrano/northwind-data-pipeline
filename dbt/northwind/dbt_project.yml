@@ -34,7 +34,9 @@ models:
   northwind:
     marts:
       core:
+        +schema: consumption
         +materialized: table
     staging:
       northwind:
+        +schema: transformed
         +materialized: view
