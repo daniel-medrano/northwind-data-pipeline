@@ -21,9 +21,9 @@ fct_sales as (
         shipping_geographics_id,
         unit_price,
         quantity,
-        discount
-        -- TODO: gross_sales
-        -- TODO: net_sales
+        discount,
+        gross_sales,
+        net_sales
     from stg_orders o
     inner join stg_order_details od
         on o.order_id = od.order_id
