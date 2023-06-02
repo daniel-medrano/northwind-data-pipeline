@@ -2,7 +2,7 @@ with stg_orders as (
     select * from {{ ref('stg_orders') }}
 ),
 dim_dates as (
-    select
+    select distinct
         concat(
             year(order_date),
             case length(month(order_date))
