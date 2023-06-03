@@ -6,11 +6,11 @@ Nothing yet...
 
 ## Architecture
 
-![Architecture](Docs/Diagrams/architecture.png)
+![Architecture](Docs/Diagrams/architecture.svg)
 
 ## Data Model
 
-![Data Model](Docs/Diagrams/data-model.png)
+![Data Model](Docs/Diagrams/data-model.svg)
 
 ## DAG
 
